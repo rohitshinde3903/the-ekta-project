@@ -156,7 +156,7 @@ export const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto"
           >
-            <Button asChild size="lg" className="relative overflow-hidden group w-full">
+            <Button size="lg" className="relative overflow-hidden group w-full">
               <Link href="/donate">
                 <span className="relative z-10">Donate Now</span>
                 <motion.div 
@@ -175,7 +175,7 @@ export const Hero = () => {
             className="w-full sm:w-auto"
           >
             <Button
-              asChild
+              
               variant="outline"
               size="lg"
               className="border-green-600 text-green-700 hover:bg-green-50 group relative w-full"
@@ -191,12 +191,12 @@ export const Hero = () => {
 
       {/* Stats Bar - Positioned with flex grow to avoid overlap */}
       <motion.div
-        className="relative mt-5 z-10 w-full mt-5 py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-green-100"
+        className="relative mt-5 z-10 w-full py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-green-100"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, type: 'spring', stiffness: 100 }}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mt-5">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat, idx) => (
               <motion.div
