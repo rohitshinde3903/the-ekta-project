@@ -3,12 +3,12 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-green-50 via-white to-green-100 text-gray-800 py-16 border-t border-green-100">
+    <footer className="bg-gradient-to-br from-cyan-50 via-white to-cyan-100 text-gray-800 py-16 border-t border-cyan-100">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Logo & Description */}
           <div>
-            <Link href="/" className="text-2xl font-bold text-green-700 tracking-wide">
+            <Link href="/" className="text-2xl font-bold text-cyan-700 tracking-wide">
               The Ekta Project
             </Link>
             <p className="mt-4 text-sm text-gray-600 max-w-xs">
@@ -18,25 +18,25 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-green-800 mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-cyan-800 mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="text-gray-700 hover:text-green-600 transition">
+                <Link href="/about" className="text-gray-700 hover:text-cyan-600 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/programs" className="text-gray-700 hover:text-green-600 transition">
+                <Link href="/programs" className="text-gray-700 hover:text-cyan-600 transition">
                   Our Programs
                 </Link>
               </li>
               <li>
-                <Link href="/donate" className="text-gray-700 hover:text-green-600 transition">
+                <Link href="/donate" className="text-gray-700 hover:text-cyan-600 transition">
                   Donate
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-700 hover:text-green-600 transition">
+                <Link href="/contact" className="text-gray-700 hover:text-cyan-600 transition">
                   Contact Us
                 </Link>
               </li>
@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-green-800 mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold text-cyan-800 mb-4">Contact</h3>
             <address className="not-italic text-sm text-gray-600 space-y-1">
               <p>123 Community Street</p>
               <p>Mumbai, India 400001</p>
@@ -56,18 +56,18 @@ export default function Footer() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className="text-lg font-semibold text-green-800 mb-4">Stay Connected</h3>
-            <div className="flex space-x-4 mb-6 text-green-700">
-              <a href="#" className="hover:text-green-500 transition">
+            <h3 className="text-lg font-semibold text-cyan-800 mb-4">Stay Connected</h3>
+            <div className="flex space-x-4 mb-6 text-cyan-700">
+              <a href="#" className="hover:text-cyan-500 transition">
                 <FaFacebookF />
               </a>
-              <a href="#" className="hover:text-green-500 transition">
+              <a href="#" className="hover:text-cyan-500 transition">
                 <FaTwitter />
               </a>
-              <a href="#" className="hover:text-green-500 transition">
+              <a href="#" className="hover:text-cyan-500 transition">
                 <FaInstagram />
               </a>
-              <a href="#" className="hover:text-green-500 transition">
+              <a href="#" className="hover:text-cyan-500 transition">
                 <FaLinkedinIn />
               </a>
             </div>
@@ -81,7 +81,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="bg-green-600 text-white px-4 py-2 hover:bg-green-700 transition"
+                className="bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-700 transition"
               >
                 Subscribe
               </button>
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-green-200 mt-12 pt-6 text-center text-sm text-gray-500">
+        <div className="border-t border-cyan-200 mt-12 pt-6 text-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} The Ekta Project. All rights reserved.</p>
         </div>
       </div>

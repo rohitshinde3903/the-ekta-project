@@ -30,9 +30,9 @@ export const Hero = () => {
   const floatingIcons = [
     { icon: '❤️', color: 'text-pink-500', position: 'top-10 left-10', size: 'text-2xl', animation: { y: [0, -20, 0] } },
     { icon: '⭐', color: 'text-yellow-400', position: 'top-20 right-10', size: 'text-3xl', animation: { y: [0, -30, 0] } },
-    { icon: '🌱', color: 'text-green-500', position: 'bottom-1/4 left-1/4', size: 'text-3xl', animation: { rotate: [0, 15, 0] } },
+    { icon: '🌱', color: 'text-cyan-500', position: 'bottom-1/4 left-1/4', size: 'text-3xl', animation: { rotate: [0, 15, 0] } },
     { icon: '✨', color: 'text-blue-300', position: 'top-1/3 right-1/4', size: 'text-2xl', animation: { opacity: [0.8, 1, 0.8] } },
-    { icon: '🌍', color: 'text-emerald-500', position: 'bottom-1/3 left-1/3', size: 'text-4xl', animation: { scale: [1, 1.1, 1] } },
+    { icon: '🌍', color: 'text-blue-500', position: 'bottom-1/3 left-1/3', size: 'text-4xl', animation: { scale: [1, 1.1, 1] } },
   ];
 
   return (
@@ -85,7 +85,7 @@ export const Hero = () => {
       {!isMobile && [...Array(15)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-green-400 opacity-20"
+          className="absolute rounded-full bg-cyan-400 opacity-20"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
@@ -114,7 +114,7 @@ export const Hero = () => {
       >
         <div className="mb-6 flex flex-col items-center">
           <motion.span 
-            className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-green-700 bg-green-100 rounded-full"
+            className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-cyan-700 bg-cyan-100 rounded-full"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring" }}
@@ -128,7 +128,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-700">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-700">
               Empowering Communities
             </span>
             <span className="block mt-2">Together for Sustainable Change</span>
@@ -160,7 +160,7 @@ export const Hero = () => {
               <Link href="/donate">
                 <span className="relative z-10">Donate Now</span>
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-700 z-0"
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-700 z-0"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '0%' }}
                   transition={{ duration: 0.4 }}
@@ -178,11 +178,11 @@ export const Hero = () => {
               
               variant="outline"
               size="lg"
-              className="border-green-600 text-green-700 hover:bg-green-50 group relative w-full"
+              className="border-cyan-600 text-cyan-700 hover:bg-cyan-50 group relative w-full"
             >
               <Link href="/about">
                 <span className="relative z-10">Learn About Our Work</span>
-                <div className="absolute inset-0 bg-green-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-cyan-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               </Link>
             </Button>
           </motion.div>
@@ -191,7 +191,7 @@ export const Hero = () => {
 
       {/* Stats Bar - Positioned with flex grow to avoid overlap */}
       <motion.div
-        className="relative mt-5 z-10 w-full py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-green-100"
+        className="relative mt-5 z-10 w-full py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-cyan-100"
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, type: 'spring', stiffness: 100 }}
@@ -201,7 +201,7 @@ export const Hero = () => {
             {stats.map((stat, idx) => (
               <motion.div
                 key={idx}
-                className="p-3 md:p-4 bg-white rounded-xl shadow-sm border border-green-50 hover:shadow-md transition-shadow flex flex-col items-center"
+                className="p-3 md:p-4 bg-white rounded-xl shadow-sm border border-cyan-50 hover:shadow-md transition-shadow flex flex-col items-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2 + idx * 0.1 }}
@@ -210,7 +210,7 @@ export const Hero = () => {
                   boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
                 }}
               >
-                <p className="text-2xl md:text-3xl font-bold text-green-700 mb-1">{stat.value}</p>
+                <p className="text-2xl md:text-3xl font-bold text-cyan-700 mb-1">{stat.value}</p>
                 <p className="text-xs md:text-sm text-gray-600 font-medium text-center">{stat.label}</p>
               </motion.div>
             ))}
@@ -222,7 +222,7 @@ export const Hero = () => {
       {!isMobile && (
         <>
           <motion.div 
-            className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-green-200/30 blur-xl"
+            className="absolute bottom-10 right-10 w-24 h-24 rounded-full bg-cyan-200/30 blur-xl"
             animate={{ 
               scale: [1, 1.2, 1],
               opacity: [0.3, 0.5, 0.3]
@@ -234,7 +234,7 @@ export const Hero = () => {
           />
           
           <motion.div 
-            className="absolute top-20 left-20 w-16 h-16 rounded-full bg-emerald-200/40 blur-xl"
+            className="absolute top-20 left-20 w-16 h-16 rounded-full bg-blue-200/40 blur-xl"
             animate={{ 
               scale: [1, 1.5, 1],
               opacity: [0.2, 0.4, 0.2]

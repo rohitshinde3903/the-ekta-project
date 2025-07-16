@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiHeart, FiBookOpen, FiPhone, FiUsers, FiBook, FiPhoneCall, FiMapPin } from 'react-icons/fi';
-import { FaHandHoldingHeart, FaGraduationCap, FaStethoscope, FaTree } from 'react-icons/fa';
+import { FaHandHoldingHeart, FaGraduationCap, FaStethoscope, FaTree, FaPlayCircle } from 'react-icons/fa';
 
 const Home = () => {
   const [hoveredProgram, setHoveredProgram] = useState<number | null>(null);
@@ -15,21 +15,21 @@ const Home = () => {
       id: 1,
       title: "Education Initiative",
       description: "Providing quality education to underprivileged children through our network of community schools.",
-      icon: <FaGraduationCap className="text-3xl text-green-600" />,
+      icon: <FaGraduationCap className="text-3xl text-cyan-600" />,
       stats: "2,500+ students enrolled"
     },
     {
       id: 2,
       title: "Healthcare Access",
       description: "Mobile clinics and health camps bringing essential medical services to remote communities.",
-      icon: <FaStethoscope className="text-3xl text-green-600" />,
+      icon: <FaStethoscope className="text-3xl text-cyan-600" />,
       stats: "15,000+ patients treated"
     },
     {
       id: 3,
       title: "Environmental Sustainability",
       description: "Promoting eco-friendly practices and tree plantation drives to combat climate change.",
-      icon: <FaTree className="text-3xl text-green-600" />,
+      icon: <FaTree className="text-3xl text-cyan-600" />,
       stats: "50,000+ trees planted"
     }
   ];
@@ -68,13 +68,17 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f0fdf4] to-white">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-[90vh] w-full overflow-hidden flex flex-col items-center justify-between pt-16 pb-8 md:pb-0 px-4">
-        {/* Background with subtle pattern */}
+        {/* Textured background */}
         <div className="absolute inset-0 z-0" style={{
-          background: 'linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 30%, #e3f2fd 70%, #e8f5e9 100%)',
-          backgroundSize: '400% 400%',
+          backgroundImage: `
+            radial-gradient(circle at 10% 20%, rgba(224, 247, 250, 0.6) 0%, rgba(224, 247, 250, 0.2) 100%),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98))
+          `,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}>
           {/* Animated gradient */}
           <motion.div 
@@ -88,14 +92,14 @@ const Home = () => {
               ease: 'linear'
             }}
             style={{
-              background: 'linear-gradient(135deg, rgba(232,245,233,0.7) 0%, rgba(241,248,233,0.7) 30%, rgba(227,242,253,0.7) 70%, rgba(232,245,233,0.7) 100%)',
+              background: 'linear-gradient(135deg, rgba(224, 247, 250, 0.7) 0%, rgba(207, 242, 255, 0.7) 30%, rgba(227, 242, 253, 0.7) 70%, rgba(224, 247, 250, 0.7) 100%)',
               backgroundSize: '400% 400%',
             }}
           />
           
           {/* Subtle grid pattern */}
           <div className="absolute inset-0 opacity-10" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23009688' stroke-width='1'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M0 20h80M0 40h80M0 60h80M20 0v80M40 0v80M60 0v80'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%2306b6d4' stroke-width='1'%3E%3Cpath d='M0 0h80v80H0z'/%3E%3Cpath d='M0 20h80M0 40h80M0 60h80M20 0v80M40 0v80M60 0v80'/%3E%3C/g%3E%3C/svg%3E")`,
           }} />
         </div>
 
@@ -108,12 +112,12 @@ const Home = () => {
         >
           <div className="mb-6 flex flex-col items-center">
             <motion.span 
-              className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-green-700 bg-green-100 rounded-full"
+              className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-cyan-700 bg-cyan-100 rounded-full"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
             >
-              Making a Difference Since XXXX
+              Making a Difference Since 2008
             </motion.span>
             
             <motion.h1
@@ -122,7 +126,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-700">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-700">
                 Empowering Communities
               </span>
               <span className="block mt-2">Together for Sustainable Change</span>
@@ -150,10 +154,10 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto"
             >
-              <button className="relative overflow-hidden group w-full px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-green-200/50">
+              <button className="relative overflow-hidden group w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/50">
                 <span className="relative z-10">Donate Now</span>
                 <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-green-800 z-0"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-800 z-0"
                   initial={{ x: '-100%' }}
                   whileHover={{ x: '0%' }}
                   transition={{ duration: 0.4 }}
@@ -166,9 +170,9 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto"
             >
-              <button className="border-2 border-green-600 text-green-700 hover:bg-green-50 group relative w-full px-6 py-3 font-medium rounded-lg">
+              <button className="border-2 border-cyan-600 text-cyan-700 hover:bg-cyan-50 group relative w-full px-6 py-3 font-medium rounded-lg">
                 <span className="relative z-10">Learn About Our Work</span>
-                <div className="absolute inset-0 bg-green-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-cyan-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               </button>
             </motion.div>
           </motion.div>
@@ -176,7 +180,7 @@ const Home = () => {
 
         {/* Stats Bar */}
         <motion.div
-          className="relative z-10 w-full mt-5 py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-green-100"
+          className="relative z-10 w-full mt-5 py-6 md:py-8 bg-white/80 backdrop-blur-sm border-t border-cyan-100"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1, type: 'spring', stiffness: 100 }}
@@ -186,7 +190,7 @@ const Home = () => {
               {stats.map((stat, idx) => (
                 <motion.div
                   key={idx}
-                  className="p-3 md:p-4 bg-white rounded-xl shadow-sm border border-green-50 hover:shadow-md transition-shadow flex flex-col items-center"
+                  className="p-3 md:p-4 bg-white rounded-xl shadow-sm border border-cyan-50 hover:shadow-md transition-shadow flex flex-col items-center"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2 + idx * 0.1 }}
@@ -195,7 +199,7 @@ const Home = () => {
                     boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1)'
                   }}
                 >
-                  <p className="text-2xl md:text-3xl font-bold text-green-700 mb-1">{stat.value}</p>
+                  <p className="text-2xl md:text-3xl font-bold text-cyan-700 mb-1">{stat.value}</p>
                   <p className="text-xs md:text-sm text-gray-600 font-medium text-center">{stat.label}</p>
                 </motion.div>
               ))}
@@ -218,7 +222,7 @@ const Home = () => {
               Our Mission
             </motion.h2>
             <motion.div 
-              className="h-1 w-20 bg-green-600 mx-auto mb-6"
+              className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
@@ -238,24 +242,24 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {[
               {
-                icon: <FiBookOpen className="text-4xl text-green-600" />,
+                icon: <FiBookOpen className="text-4xl text-cyan-600" />,
                 title: "Education",
                 description: "Building schools, training teachers, and providing scholarships to ensure every child has access to quality education."
               },
               {
-                icon: <FiHeart className="text-4xl text-green-600" />,
+                icon: <FiHeart className="text-4xl text-cyan-600" />,
                 title: "Healthcare",
                 description: "Establishing clinics, organizing medical camps, and promoting health awareness in underserved communities."
               },
               {
-                icon: <FiUsers className="text-4xl text-green-600" />,
+                icon: <FiUsers className="text-4xl text-cyan-600" />,
                 title: "Community",
                 description: "Empowering communities through skill development, sustainable farming, and women's empowerment programs."
               }
             ].map((item, index) => (
               <motion.div 
                 key={index}
-                className="bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 shadow-md border border-green-100 hover:shadow-lg transition-all"
+                className="bg-gradient-to-br from-white to-cyan-50 rounded-2xl p-6 shadow-md border border-cyan-100 hover:shadow-lg transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -274,7 +278,7 @@ const Home = () => {
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <motion.h2 
@@ -287,7 +291,7 @@ const Home = () => {
               Our Programs
             </motion.h2>
             <motion.div 
-              className="h-1 w-20 bg-green-600 mx-auto mb-6"
+              className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
@@ -308,7 +312,7 @@ const Home = () => {
             {programs.map((program) => (
               <motion.div
                 key={program.id}
-                className="relative bg-white rounded-2xl overflow-hidden shadow-lg border border-green-100"
+                className="relative bg-white rounded-2xl overflow-hidden shadow-lg border border-cyan-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -323,9 +327,9 @@ const Home = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">{program.title}</h3>
                   <p className="text-gray-600 mb-4 text-center">{program.description}</p>
-                  <p className="text-sm text-green-600 font-medium text-center">{program.stats}</p>
+                  <p className="text-sm text-cyan-600 font-medium text-center">{program.stats}</p>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-green-600/5 to-emerald-700/5 opacity-0 hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/5 to-blue-700/5 opacity-0 hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
           </div>
@@ -346,7 +350,7 @@ const Home = () => {
               Success Stories
             </motion.h2>
             <motion.div 
-              className="h-1 w-20 bg-green-600 mx-auto mb-6"
+              className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"
               initial={{ width: 0 }}
               whileInView={{ width: 80 }}
               viewport={{ once: true }}
@@ -364,7 +368,7 @@ const Home = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 shadow-lg">
+            <div className="relative bg-gradient-to-br from-cyan-50 to-blue-50 rounded-3xl p-8 md:p-12 shadow-lg">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}
@@ -374,13 +378,13 @@ const Home = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="flex justify-center mb-6">
-                    <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                    <div className="bg-cyan-200 border-2 border-dashed rounded-xl w-16 h-16" />
                   </div>
                   <p className="text-lg md:text-xl italic text-gray-700 mb-8">
                     "{testimonial.content}"
                   </p>
                   <h4 className="text-xl font-bold text-gray-800">{testimonial.name}</h4>
-                  <p className="text-green-600">{testimonial.role}</p>
+                  <p className="text-cyan-600">{testimonial.role}</p>
                 </motion.div>
               ))}
               
@@ -388,7 +392,7 @@ const Home = () => {
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
-                    className={`w-3 h-3 rounded-full ${activeTestimonial === index ? 'bg-green-600' : 'bg-green-300'}`}
+                    className={`w-3 h-3 rounded-full ${activeTestimonial === index ? 'bg-cyan-600' : 'bg-cyan-300'}`}
                     onClick={() => setActiveTestimonial(index)}
                   />
                 ))}
@@ -399,7 +403,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 
@@ -431,7 +435,7 @@ const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-emerald-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition"
+                className="px-8 py-4 bg-white text-cyan-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition"
               >
                 Donate Now
               </motion.button>

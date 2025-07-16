@@ -16,18 +16,18 @@ export default function AboutPage() {
   const partners = [
     { id: 1, name: 'Global Education Fund', description: 'Education partnership since 2015' },
     { id: 2, name: 'Health for All Foundation', description: 'Medical outreach programs' },
-    { id: 3, name: 'Green Earth Initiative', description: 'Environmental sustainability projects' },
+    { id: 3, name: 'cyan Earth Initiative', description: 'Environmental sustainability projects' },
     { id: 4, name: 'Women Empowerment Network', description: 'Skill development programs' },
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-green-50">
+    <div className="bg-gradient-to-b from-white to-cyan-50">
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-emerald-900/80 to-green-800/80" />
-          <div className="absolute top-20 right-20 w-48 h-48 rounded-full bg-green-400/10 blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-emerald-500/10 blur-3xl" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900/80 to-cyan-800/80" />
+          <div className="absolute top-20 right-20 w-48 h-48 rounded-full bg-cyan-400/10 blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl" />
         </div>
         
         <motion.div 
@@ -42,10 +42,10 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            About <span className="text-green-300">The Ekta Project</span>
+            About <span className="text-cyan-300">The Ekta Project</span>
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto mb-10"
+            className="text-xl md:text-2xl text-cyan-100 max-w-3xl mx-auto mb-10"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -62,7 +62,7 @@ export default function AboutPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-green-500 text-white font-medium rounded-lg shadow-lg shadow-green-300/30 hover:bg-green-600 transition"
+              className="px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:bg-cyan-600 transition"
             >
               Our Impact Report
             </motion.button>
@@ -89,12 +89,12 @@ export default function AboutPage() {
               transition={{ duration: 0.7 }}
             >
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-700 to-emerald-900 flex items-center justify-center">
-                  <FaHeart className="text-6xl text-green-300 opacity-30" />
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-blue-900 flex items-center justify-center">
+                  <FaHeart className="text-6xl text-cyan-300 opacity-30" />
                 </div>
               </div>
               <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl z-10 border-4 border-white">
-                <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
                   <FaLeaf className="text-4xl text-white opacity-80" />
                 </div>
               </div>
@@ -124,14 +124,14 @@ export default function AboutPage() {
               </div>
               
               <motion.div 
-                className="mt-8 p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-100"
+                className="mt-8 p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border border-cyan-100"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5 }}
               >
                 <div className="flex items-start">
-                  <FaHandshake className="text-3xl text-green-600 mt-1 mr-4" />
+                  <FaHandshake className="text-3xl text-cyan-600 mt-1 mr-4" />
                   <div>
                     <h3 className="text-lg font-bold text-gray-800 mb-2">Our Commitment</h3>
                     <p className="text-gray-600">
@@ -146,7 +146,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
@@ -157,15 +157,15 @@ export default function AboutPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg border border-green-100"
+              className="bg-white p-8 rounded-2xl shadow-lg border border-cyan-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                  <FaLightbulb className="text-3xl text-green-600" />
+                <div className="w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center">
+                  <FaLightbulb className="text-3xl text-cyan-600" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">Our Mission</h3>
@@ -175,15 +175,15 @@ export default function AboutPage() {
             </motion.div>
             
             <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg border border-green-100"
+              className="bg-white p-8 rounded-2xl shadow-lg border border-cyan-100"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="flex justify-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                  <FaChartLine className="text-3xl text-green-600" />
+                <div className="w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center">
+                  <FaChartLine className="text-3xl text-cyan-600" />
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">Our Vision</h3>
@@ -194,7 +194,7 @@ export default function AboutPage() {
           </div>
           
           <motion.div 
-            className="mt-16 max-w-4xl mx-auto bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl p-8 text-white"
+            className="mt-16 max-w-4xl mx-auto bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-8 text-white"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -212,7 +212,7 @@ export default function AboutPage() {
                     {value.icon}
                   </div>
                   <h4 className="text-xl font-bold mb-2">{value.title}</h4>
-                  <p className="text-green-100">{value.desc}</p>
+                  <p className="text-cyan-100">{value.desc}</p>
                 </div>
               ))}
             </div>
@@ -234,19 +234,19 @@ export default function AboutPage() {
             {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
-                className="bg-gradient-to-b from-white to-green-50 rounded-2xl overflow-hidden shadow-lg border border-green-100"
+                className="bg-gradient-to-b from-white to-cyan-50 rounded-2xl overflow-hidden shadow-lg border border-cyan-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ y: -10 }}
               >
-                <div className="h-48 bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
                   <FaUsers className="text-6xl text-white opacity-80" />
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
-                  <p className="text-green-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-cyan-600 font-medium mb-3">{member.role}</p>
                   <p className="text-gray-600 text-sm">{member.bio}</p>
                 </div>
               </motion.div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-green-300/30 hover:shadow-emerald-400/30 transition"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:shadow-blue-400/30 transition"
             >
               Join Our Team
             </motion.button>
@@ -275,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
@@ -287,7 +287,7 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative">
               {/* Timeline line */}
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-green-200 transform -translate-x-1/2 hidden md:block"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-cyan-200 transform -translate-x-1/2 hidden md:block"></div>
               
               <div className="space-y-12">
                 {[
@@ -331,14 +331,14 @@ export default function AboutPage() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     {/* Step circle */}
-                    <div className="absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-xl z-10 border-4 border-white shadow-lg hidden md:flex">
+                    <div className="absolute left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-cyan-500 text-white flex items-center justify-center font-bold text-xl z-10 border-4 border-white shadow-lg hidden md:flex">
                       {step.step}
                     </div>
                     
                     <div className="md:w-5/12 mb-6 md:mb-0">
-                      <div className="bg-white p-6 rounded-2xl shadow-lg border border-green-100">
+                      <div className="bg-white p-6 rounded-2xl shadow-lg border border-cyan-100">
                         <div className="flex justify-center mb-4">
-                          <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-2xl">
+                          <div className="w-16 h-16 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 text-2xl">
                             {step.icon}
                           </div>
                         </div>
@@ -350,7 +350,7 @@ export default function AboutPage() {
                     <div className="md:w-2/12"></div>
                     
                     <div className="md:w-5/12">
-                      <div className="aspect-video rounded-2xl overflow-hidden bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center">
+                      <div className="aspect-video rounded-2xl overflow-hidden bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center">
                         <div className="text-white text-4xl opacity-30">
                           Step {step.step}
                         </div>
@@ -381,14 +381,14 @@ export default function AboutPage() {
             {partners.map((partner) => (
               <motion.div
                 key={partner.id}
-                className="p-6 bg-gradient-to-b from-white to-green-50 rounded-2xl border border-green-100 hover:shadow-md transition-shadow"
+                className="p-6 bg-gradient-to-b from-white to-cyan-50 rounded-2xl border border-cyan-100 hover:shadow-md transition-shadow"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mr-4">
                     <FaHandshake className="text-xl text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800">{partner.name}</h3>
@@ -407,7 +407,7 @@ export default function AboutPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-green-300/30 hover:shadow-emerald-400/30 transition"
+              className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:shadow-blue-400/30 transition"
             >
               Become a Partner
             </motion.button>
@@ -416,7 +416,7 @@ export default function AboutPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
@@ -426,7 +426,7 @@ export default function AboutPage() {
           </div>
           
           <motion.div 
-            className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center"
+            className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -442,7 +442,7 @@ export default function AboutPage() {
             {[1, 2, 3].map((item) => (
               <motion.div
                 key={item}
-                className="aspect-video rounded-xl overflow-hidden bg-gradient-to-r from-green-400 to-emerald-500 flex items-center justify-center"
+                className="aspect-video rounded-xl overflow-hidden bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -459,7 +459,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2 
             className="text-3xl md:text-4xl font-bold mb-6"
@@ -490,7 +490,7 @@ export default function AboutPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-emerald-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition"
+              className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition"
             >
               Donate Now
             </motion.button>
