@@ -6,7 +6,7 @@ import { FiHeart, FiBookOpen, FiPhone, FiUsers, FiBook, FiPhoneCall, FiMapPin } 
 import { FaHandHoldingHeart, FaGraduationCap, FaStethoscope, FaTree } from 'react-icons/fa';
 
 const Home = () => {
-  const [hoveredProgram, setHoveredProgram] = useState(null);
+  const [hoveredProgram, setHoveredProgram] = useState<number | null>(null);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   // Programs data

@@ -5,19 +5,22 @@ import Link from 'next/link'
 
 const navVariants = {
   hidden: { y: -80, opacity: 0 },
-  visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 80 } },
-}
-
-const floatVariants = {
-  animate: {
-    y: [0, -5, 0],
+  visible: {
+    y: 0,
+    opacity: 1,
     transition: {
-      repeat: Infinity,
-      duration: 2,
-      ease: 'easeInOut',
+      type: 'spring' as const,
+      stiffness: 80,
+      damping: 12,      // ✅ include damping for spring
+      mass: 0.5,
     },
   },
-}
+};
+
+
+
+
+
 
 export default function Navbar() {
   return (
@@ -29,13 +32,12 @@ export default function Navbar() {
     >
       <div className="flex items-center gap-2">
         <h1 className="text-xl font-bold tracking-tight">EKTA</h1>
-        <motion.span
-          variants={floatVariants}
-          animate="animate"
-          className="text-yellow-300 text-lg"
+        <motion.div
+        
+        animate="animate"
         >
           ✨
-        </motion.span>
+        </motion.div>
       </div>
 
       <ul className="flex gap-6 text-sm font-medium">
