@@ -1,19 +1,40 @@
-// components/ProgramCard.tsx
-'use client'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { Card, CardContent, Typography, Button } from '@mui/material'
-import { motion } from 'framer-motion'
+interface ProgramCardProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
 
-export default function ProgramCard({ title, description }: { title: string, description: string }) {
+export default function ProgramCard({
+  title,
+  description,
+  image,
+  link,
+}: ProgramCardProps) {
   return (
-    <motion.div whileHover={{ scale: 1.05 }} transition={{ type: 'spring' }}>
-      <Card sx={{ maxWidth: 345, borderRadius: 4, boxShadow: 3 }}>
-        <CardContent>
-          <Typography variant="h5" component="div">{title}</Typography>
-          <Typography variant="body2" color="text.secondary">{description}</Typography>
-          <Button variant="contained" sx={{ mt: 2 }}>Learn More</Button>
-        </CardContent>
-      </Card>
-    </motion.div>
-  )
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+      <div className="relative h-48">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-bold mb-2 text-gray-800">{title}</h3>
+        <p className="text-gray-600 mb-4">{description}</p>
+        <Link
+          href={link}
+          className="text-primary font-medium hover:underline"
+        >
+          Learn more →
+        </Link>
+      </div>
+    </div>
+  );
 }

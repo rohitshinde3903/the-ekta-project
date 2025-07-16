@@ -1,11 +1,14 @@
-// app/layout.tsx
 import type { Metadata } from 'next';
-
+import { Inter } from 'next/font/google';
 import './globals.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'THE EKTA PROJECT - Building Unity Through Action',
-  description: 'Empowering communities through sustainable development, education, and healthcare',
+  title: 'The Ekta Project - Empowering Communities Together',
+  description: 'Join us in our mission to create sustainable change and uplift underprivileged communities across the nation.',
 };
 
 export default function RootLayout({
@@ -15,16 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
-        
+      <body className={`${inter.className} bg-gray-50`}>
+        <Header />
+        <main className="min-h-screen">
           {children}
-        
+        </main>
+        <Footer />
       </body>
     </html>
   );
