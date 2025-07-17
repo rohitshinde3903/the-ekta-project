@@ -21,13 +21,14 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white to-cyan-50">
+    
+      <div className="bg-gradient-to-b from-slate-50 to-cyan-50">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-900/80 to-cyan-800/80" />
-          <div className="absolute top-20 right-20 w-48 h-48 rounded-full bg-cyan-400/10 blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-blue-500/10 blur-3xl" />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-cyan-600 to-blue-700" />
+          <div className="absolute top-20 right-20 w-48 h-48 rounded-full bg-cyan-400/20 blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-64 h-64 rounded-full bg-blue-500/20 blur-3xl" />
         </div>
         
         <motion.div 
@@ -37,12 +38,12 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
         >
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            About <span className="text-cyan-300">The Ekta Project</span>
+            About Ekta Project and Thinkers Behind
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-cyan-100 max-w-3xl mx-auto mb-10"
@@ -59,20 +60,22 @@ export default function AboutPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            <motion.button
+            <motion.a
+              href="#donate-form"
+              className="px-6 py-3 bg-white text-cyan-700 font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:bg-gray-100 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:bg-cyan-600 transition"
             >
               Our Impact Report
-            </motion.button>
-            <motion.button
+            </motion.a>
+            <motion.a
+              href="#impact"
+              className="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-white/20 text-white font-medium rounded-lg border border-white/30 hover:bg-white/30 transition"
             >
               Meet Our Team
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
       </section>
