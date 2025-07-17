@@ -61,7 +61,7 @@ export default function AboutPage() {
             transition={{ delay: 0.7 }}
           >
             <motion.a
-              href="#donate-form"
+              href="#impact-section"
               className="px-6 py-3 bg-white text-cyan-700 font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:bg-gray-100 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -69,7 +69,7 @@ export default function AboutPage() {
               Our Impact Report
             </motion.a>
             <motion.a
-              href="#impact"
+              href="#team-section"
               className="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -224,7 +224,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="py-16 md:py-24 bg-white">
+      <section id='team-section' className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
@@ -419,7 +419,7 @@ export default function AboutPage() {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
+      <section id='impact-section' className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
