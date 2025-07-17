@@ -155,7 +155,7 @@ const Home = () => {
               className="w-full sm:w-auto"
             >
               <button className="relative overflow-hidden group w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/50">
-                <span className="relative z-10">Donate Now</span>
+                <a href="/donate" className="relative z-10">Donate Now</a>
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-blue-700 to-cyan-800 z-0"
                   initial={{ x: '-100%' }}
@@ -171,7 +171,7 @@ const Home = () => {
               className="w-full sm:w-auto"
             >
               <button className="border-2 border-cyan-600 text-cyan-700 hover:bg-cyan-50 group relative w-full px-6 py-3 font-medium rounded-lg">
-                <span className="relative z-10">Learn About Our Work</span>
+                <a href='/about' className="relative z-10">Learn About Our Work</a>
                 <div className="absolute inset-0 bg-cyan-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               </button>
             </motion.div>
