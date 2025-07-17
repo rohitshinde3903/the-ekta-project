@@ -113,7 +113,7 @@ export default function AboutPage() {
               />
               <div className="space-y-5 text-gray-700">
                 <p>
-                  Founded in 2008, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
+                  Founded in XXXX, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
                 </p>
                 <p>
                   The name "Ekta" means unity in Hindi, reflecting our core belief that real, sustainable change happens when people come together. Over the past 15 years, we've expanded our programs to include education, healthcare, environmental sustainability, and community development initiatives across 50+ communities.
