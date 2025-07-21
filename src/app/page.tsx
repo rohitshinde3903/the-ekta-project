@@ -59,7 +59,7 @@ const socialLinks = [
         </svg>
       ),
       url: 'https://docs.google.com/forms/d/1muNs0tN6pyf4xbKj3J6cCPT9io2-CwcdxY18Bk8qe5I/edit',
-      color: 'from-green-500 to-teal-600',
+      color: 'from-blue-500 to-teal-600',
       description: 'Join our team and contribute to a meaningful cause.'
     }
   ];

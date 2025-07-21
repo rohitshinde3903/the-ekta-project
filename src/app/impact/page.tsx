@@ -7,7 +7,7 @@ export default function ImpactPage() {
   const stats = [
     { id: 1, value: "200+", label: "Lives Touched", icon: <FaUsers className="text-3xl text-cyan-600" /> },
     { id: 2, value: "5", label: "Communities Served", icon: <FaCheckCircle className="text-3xl text-blue-600" /> },
-    { id: 3, value: "3", label: "Years of Wisdom", icon: <FaHandsHelping className="text-3xl text-green-600" /> },
+    { id: 3, value: "3", label: "Years of Wisdom", icon: <FaHandsHelping className="text-3xl text-blue-600" /> },
     { id: 4, value: "∞", label: "Goals", icon: <FaBullseye className="text-3xl text-yellow-600" /> },
   ];
 
