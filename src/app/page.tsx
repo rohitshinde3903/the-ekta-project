@@ -64,29 +64,29 @@ const socialLinks = [
     }
   ];
   // Programs data
-  const programs = [
-    {
-      id: 1,
-      title: "Education Initiative",
-      description: "Providing quality education to underprivileged children through our network of community schools.",
-      icon: <FaGraduationCap className="text-3xl text-cyan-600" />,
-      stats: "Educated children"
-    },
-    {
-      id: 2,
-      title: "Healthcare Access",
-      description: "Mobile clinics and health camps bringing essential medical services to remote communities.",
-      icon: <FaStethoscope className="text-3xl text-cyan-600" />,
-      stats: "Assisting Medical Needs"
-    },
-    {
-      id: 3,
-      title: "Environmental Sustainability",
-      description: "Promoting eco-friendly practices and tree plantation drives to combat climate change.",
-      icon: <FaTree className="text-3xl text-cyan-600" />,
-      stats: "5000+ trees planted"
-    }
-  ];
+  // const programs = [
+  //   {
+  //     id: 1,
+  //     title: "Education Initiative",
+  //     description: "Providing quality education to underprivileged children through our network of community schools.",
+  //     icon: <FaGraduationCap className="text-3xl text-cyan-600" />,
+  //     stats: "Educated children"
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Healthcare Access",
+  //     description: "Mobile clinics and health camps bringing essential medical services to remote communities.",
+  //     icon: <FaStethoscope className="text-3xl text-cyan-600" />,
+  //     stats: "Assisting Medical Needs"
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Environmental Sustainability",
+  //     description: "Promoting eco-friendly practices and tree plantation drives to combat climate change.",
+  //     icon: <FaTree className="text-3xl text-cyan-600" />,
+  //     stats: "5000+ trees planted"
+  //   }
+  // ];
 
   // Testimonials data
   // const testimonials = [
@@ -426,7 +426,7 @@ const socialLinks = [
       </section>
 
       {/* Programs Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
+      {/* <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <motion.h2 
@@ -482,7 +482,7 @@ const socialLinks = [
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Testimonials Section */}
      

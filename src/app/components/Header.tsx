@@ -11,8 +11,8 @@ export default function Header() {
   const navItems = [
     { label: 'Home', href: '/' },
     { label: 'About Us', href: '/about' },
-   
-    { label: 'Donate', href: '/donate' },
+   { label: 'Our Impact', href: '/impact' },
+   { label: 'Our Mission', href: '/mission' },
     { label: 'Contact', href: '/contact' },
   ]
 
