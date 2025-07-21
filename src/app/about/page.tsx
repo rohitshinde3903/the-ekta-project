@@ -81,72 +81,83 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <motion.div 
-              className="lg:w-1/2 relative"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-            >
-              <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-blue-900 flex items-center justify-center">
-                  <FaHeart className="text-6xl text-cyan-300 opacity-30" />
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl z-10 border-4 border-white">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
-                  <FaLeaf className="text-4xl text-white opacity-80" />
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="lg:w-1/2"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-            >
-              <SectionTitle
-                title="Our Story"
-                subtitle="How it all began"
-              />
-              <div className="space-y-5 text-gray-700">
-                <p>
-                  Founded in 2023, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
-                </p>
-                <p>
-                  The name "Ekta" means unity in Hindi, reflecting our core belief that real, sustainable change happens when people come together. Over the past 15 years, we've expanded our programs to include education, healthcare, environmental sustainability, and community development initiatives across 5 communities.
-                </p>
-                <p>
-                  Today, we're proud to have impacted over 200 lives through our various programs, always staying true to our founding principle: "Empowerment through Unity."
-                </p>
-              </div>
-              
-              <motion.div 
-                className="mt-8 p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border border-cyan-100"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-              >
-                <div className="flex items-start">
-                  <FaHandshake className="text-3xl text-cyan-600 mt-1 mr-4" />
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-2">Our Commitment</h3>
-                    <p className="text-gray-600">
-                      We maintain a 100% donation efficiency rate, ensuring that nearly every rupee donated goes directly to community programs.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
+      import Image from 'next/image'; // Only if you're using Next.js
+
+<section className="py-16 md:py-24">
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col lg:flex-row gap-12 items-center">
+      <motion.div
+        className="lg:w-1/2 relative"
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <Image
+            src="/images/rename.png"
+            alt="Group working together"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-2xl"
+          />
         </div>
-      </section>
+        <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-2xl overflow-hidden shadow-xl z-10 border-4 border-white">
+          <Image
+            src="/images/logo.png"
+            alt="Ekta Logo"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-2xl"
+          />
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="lg:w-1/2"
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        <SectionTitle
+          title="Our Story"
+          subtitle="How it all began"
+        />
+        <div className="space-y-5 text-gray-700">
+          <p>
+            Founded in 2023, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
+          </p>
+          <p>
+            The name "Ekta" means unity in Hindi, reflecting our core belief that real, sustainable change happens when people come together. Over the past 3 years, we've expanded our programs to include education, healthcare, environmental sustainability, and community development initiatives across 5 communities.
+          </p>
+          <p>
+            Today, we're proud to have impacted over 200 lives through our various programs, always staying true to our founding principle: "Empowerment through Unity."
+          </p>
+        </div>
+
+        <motion.div
+          className="mt-8 p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-xl border border-cyan-100"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          <div className="flex items-start">
+            <FaHandshake className="text-3xl text-cyan-600 mt-1 mr-4" />
+            <div>
+              <h3 className="text-lg font-bold text-gray-800 mb-2">Our Commitment</h3>
+              <p className="text-gray-600">
+                We maintain a 100% donation efficiency rate, ensuring that nearly every rupee donated goes directly to community programs.
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
 
       {/* Mission & Vision */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">

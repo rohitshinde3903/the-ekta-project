@@ -338,17 +338,17 @@ const Home = () => {
               {
                 icon: <FiBookOpen className="text-4xl text-cyan-600" />,
                 title: "Education",
-                description: "Building schools, training teachers, and providing scholarships to ensure every child has access to quality education."
+                description: "We're gearing up for a large-scale education and skill-building drive. From learning resources to real-world skills, this upcoming initiative aims to empower youth with tools they truly need to grow."
               },
               {
                 icon: <FiHeart className="text-4xl text-cyan-600" />,
-                title: "Healthcare",
-                description: "Establishing clinics, organizing medical camps, and promoting health awareness in underserved communities."
+                title: "Women Empowerment",
+                description: "We uplift women through skill training, mentorship, and health education. Our initiatives include hygiene awareness and the distribution of sanitary products to ensure dignity, well-being for all and resources to help them become confident, independent changemakers."
               },
               {
                 icon: <FiUsers className="text-4xl text-cyan-600" />,
                 title: "Community",
-                description: "Empowering communities through skill development, sustainable farming, and women's empowerment programs."
+                description: "We believe change begins at the grassroots. Through food, clothing, and daily essentials donation drives, along with tree plantations and local impact projects, we’re building stronger, kinder, and more sustainable communities."
               }
             ].map((item, index) => (
               <motion.div 
