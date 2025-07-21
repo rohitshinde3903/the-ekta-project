@@ -16,55 +16,55 @@ const Home = () => {
       title: "Education Initiative",
       description: "Providing quality education to underprivileged children through our network of community schools.",
       icon: <FaGraduationCap className="text-3xl text-cyan-600" />,
-      stats: "2,500+ students enrolled"
+      stats: "Educated children"
     },
     {
       id: 2,
       title: "Healthcare Access",
       description: "Mobile clinics and health camps bringing essential medical services to remote communities.",
       icon: <FaStethoscope className="text-3xl text-cyan-600" />,
-      stats: "15,000+ patients treated"
+      stats: "Assisting Medical Needs"
     },
     {
       id: 3,
       title: "Environmental Sustainability",
       description: "Promoting eco-friendly practices and tree plantation drives to combat climate change.",
       icon: <FaTree className="text-3xl text-cyan-600" />,
-      stats: "50,000+ trees planted"
+      stats: "5000+ trees planted"
     }
   ];
 
   // Testimonials data
-  const testimonials = [
-    {
-      id: 1,
-      name: "Rajesh Kumar",
-      role: "Community Leader",
-      content: "The Ekta Project transformed our village with their education program. Our children now have access to quality learning for the first time.",
-      avatar: "/avatar1.svg"
-    },
-    {
-      id: 2,
-      name: "Priya Sharma",
-      role: "Healthcare Volunteer",
-      content: "Working with Ekta has been life-changing. Their mobile clinics reach communities that have never had medical access before.",
-      avatar: "/avatar2.svg"
-    },
-    {
-      id: 3,
-      name: "Dr. Anil Gupta",
-      role: "Education Specialist",
-      content: "The innovative teaching methods introduced by Ekta have dramatically improved learning outcomes in rural schools.",
-      avatar: "/avatar3.svg"
-    }
-  ];
+  // const testimonials = [
+  //   {
+  //     id: 1,
+  //     name: "Rajesh Kumar",
+  //     role: "Community Leader",
+  //     content: "The Ekta Project transformed our village with their education program. Our children now have access to quality learning for the first time.",
+  //     avatar: "/avatar1.svg"
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Priya Sharma",
+  //     role: "Healthcare Volunteer",
+  //     content: "Working with Ekta has been life-changing. Their mobile clinics reach communities that have never had medical access before.",
+  //     avatar: "/avatar2.svg"
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Dr. Anil Gupta",
+  //     role: "Education Specialist",
+  //     content: "The innovative teaching methods introduced by Ekta have dramatically improved learning outcomes in rural schools.",
+  //     avatar: "/avatar3.svg"
+  //   }
+  // ];
 
   // Stats data
   const stats = [
-    { value: '10K+', label: 'Lives Impacted' },
-    { value: '50+', label: 'Communities Served' },
-    { value: '15', label: 'Years of Service' },
-    { value: '98%', label: 'Donation Efficiency' },
+    { value: '200+', label: 'Lives Impacted' },
+    { value: '5', label: 'Communities Served' },
+    { value: '3', label: 'Years of Service' },
+    { value: '100%', label: 'Donation Efficiency' },
   ];
 
   return (
@@ -117,7 +117,7 @@ const Home = () => {
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: "spring" }}
             >
-              Making a Difference Since XXXX
+              Making a Difference Since 2023
             </motion.span>
             
             <motion.h1
@@ -207,6 +207,89 @@ const Home = () => {
           </div>
         </motion.div>
       </section>
+
+
+{/* Our Impact Section */}
+<section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
+  <div className="container mx-auto px-4">
+    <div className="max-w-3xl mx-auto text-center mb-16">
+      <motion.h2 
+        className="text-3xl md:text-4xl font-bold mb-4 text-gray-800"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        Our Impact
+      </motion.h2>
+      <motion.div 
+        className="h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-400 mx-auto mb-6 rounded-full"
+        initial={{ width: 0 }}
+        whileInView={{ width: 80 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+      <motion.p
+        className="text-lg md:text-xl text-gray-600"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        Capturing real stories, emotions, and changes through powerful visuals. Join us on Instagram to witness our journey.
+      </motion.p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {/* Sample Reel/Photo Cards */}
+      {[1, 2, 3].map((item, index) => (
+        <motion.div
+          key={index}
+          className="rounded-2xl overflow-hidden shadow-lg border border-blue-100 relative group"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          {/* Replace src with actual photo or reel thumbnail */}
+          <img
+            src={`/impact/impact${item}.jpg`}
+            alt={`Impact ${item}`}
+            className="w-full h-64 object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span className="text-white text-sm font-semibold">View on Instagram</span>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Instagram CTA */}
+    <motion.div 
+      className="mt-12 text-center"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+    >
+      <p className="text-md md:text-lg text-gray-700 mb-4">
+        See more moments that matter on our Instagram.
+      </p>
+      <a
+        href="https://instagram.com/your_instagram_id"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow hover:scale-105 transition-transform"
+      >
+        @your_instagram_id
+      </a>
+    </motion.div>
+  </div>
+</section>
+
+
+
+
 
       {/* Mission Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -337,7 +420,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <motion.h2 
@@ -400,7 +483,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">

@@ -20,10 +20,10 @@ export const Hero = () => {
 
   // Stats data
   const stats = [
-    { value: '10K+', label: 'Lives Impacted' },
-    { value: '50+', label: 'Communities Served' },
-    { value: '15', label: 'Years of Service' },
-    { value: '98%', label: 'Donation Efficiency' },
+    { value: '200+', label: 'Lives Impacted' },
+    { value: '5', label: 'Communities Served' },
+    { value: '3', label: 'Years of Service' },
+    { value: '100%', label: 'Donation Efficiency' },
   ];
 
   // Floating icons with variety

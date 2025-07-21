@@ -116,13 +116,13 @@ export default function AboutPage() {
               />
               <div className="space-y-5 text-gray-700">
                 <p>
-                  Founded in XXXX, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
+                  Founded in 2023, The Ekta Project began as a small initiative by a group of college students in Mumbai who wanted to make a tangible difference in their community. What started as weekend volunteering activities at local orphanages has now grown into a nationwide movement.
                 </p>
                 <p>
-                  The name "Ekta" means unity in Hindi, reflecting our core belief that real, sustainable change happens when people come together. Over the past 15 years, we've expanded our programs to include education, healthcare, environmental sustainability, and community development initiatives across 50+ communities.
+                  The name "Ekta" means unity in Hindi, reflecting our core belief that real, sustainable change happens when people come together. Over the past 15 years, we've expanded our programs to include education, healthcare, environmental sustainability, and community development initiatives across 5 communities.
                 </p>
                 <p>
-                  Today, we're proud to have impacted over 10,000 lives through our various programs, always staying true to our founding principle: "Empowerment through Unity."
+                  Today, we're proud to have impacted over 200 lives through our various programs, always staying true to our founding principle: "Empowerment through Unity."
                 </p>
               </div>
               
@@ -138,7 +138,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-lg font-bold text-gray-800 mb-2">Our Commitment</h3>
                     <p className="text-gray-600">
-                      We maintain a 98% donation efficiency rate, ensuring that nearly every rupee donated goes directly to community programs.
+                      We maintain a 100% donation efficiency rate, ensuring that nearly every rupee donated goes directly to community programs.
                     </p>
                   </div>
                 </div>

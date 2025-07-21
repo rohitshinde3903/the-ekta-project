@@ -5,9 +5,9 @@ import { FaHandHoldingHeart, FaChartPie, FaUniversity, FaRupeeSign, FaUsers, FaT
 
 export default function DonatePage() {
   const impactStats = [
-    { icon: <FaRupeeSign className="text-cyan-600" />, value: "₹5M+", label: "Raised since 2010" },
-    { icon: <FaUsers className="text-cyan-600" />, value: "10K+", label: "Lives impacted" },
-    { icon: <FaTree className="text-cyan-600" />, value: "50+", label: "Communities served" },
+    { icon: <FaRupeeSign className="text-cyan-600" />, value: "₹50K+", label: "Raised since 2023" },
+    { icon: <FaUsers className="text-cyan-600" />, value: "200+", label: "Lives impacted" },
+    { icon: <FaTree className="text-cyan-600" />, value: "5", label: "Communities served" },
   ];
 
   const fundAllocation = [
