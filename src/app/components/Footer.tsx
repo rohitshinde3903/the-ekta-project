@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-br from-cyan-50 via-white to-cyan-100 text-gray-800 py-16 border-t border-cyan-100">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo & Description */}
           <div>
             <Link href="/" className="text-2xl font-bold text-cyan-700 tracking-wide">
@@ -43,52 +43,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact & Socials */}
           <div>
             <h3 className="text-lg font-semibold text-cyan-800 mb-4">Contact</h3>
-            <address className="not-italic text-sm text-gray-600 space-y-1">
-              <p>123 Community Street</p>
-              <p>Mumbai, India 400001</p>
-              <p>Email: info@ektaproject.org</p>
-              <p>Phone: +91 98765 43210</p>
-            </address>
-          </div>
-
-          {/* Newsletter & Social */}
-          <div>
-            <h3 className="text-lg font-semibold text-cyan-800 mb-4">Stay Connected</h3>
-            <div className="flex space-x-4 mb-6 text-cyan-700">
-              <a href="#" className="hover:text-cyan-500 transition">
-                <FaFacebookF />
-              </a>
-              <a href="#" className="hover:text-cyan-500 transition">
-                <FaTwitter />
-              </a>
-              <a href="#" className="hover:text-cyan-500 transition">
-                <FaInstagram />
-              </a>
-              <a href="#" className="hover:text-cyan-500 transition">
-                <FaLinkedinIn />
-              </a>
+            <div className="text-sm text-gray-700 space-y-2">
+              <p>
+                <FaEnvelope className="inline mr-2 text-cyan-700" />
+                <a href="mailto:theektaprojecct2023@gmail.com" className="hover:text-cyan-600 transition">
+                  theektaprojecct2023@gmail.com
+                </a>
+              </p>
+              <p>
+                <FaInstagram className="inline mr-2 text-cyan-700" />
+                <a
+                  href="https://www.instagram.com/theektaproject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-600 transition"
+                >
+                  @theektaproject
+                </a>
+              </p>
+              <p>
+                <FaLinkedinIn className="inline mr-2 text-cyan-700" />
+                <a
+                  href="https://www.linkedin.com/company/the-ekta-project/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-600 transition"
+                >
+                  LinkedIn
+                </a>
+              </p>
             </div>
-
-            <h4 className="text-sm font-semibold mb-2">Join our newsletter</h4>
-            <form className="flex rounded overflow-hidden shadow-sm max-w-md">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full px-4 py-2 text-sm text-gray-700 bg-white focus:outline-none"
-              />
-              <button
-                type="submit"
-                className="bg-cyan-600 text-white px-4 py-2 hover:bg-cyan-700 transition"
-              >
-                Subscribe
-              </button>
-            </form>
           </div>
         </div>
 
+        {/* Bottom Footer */}
         <div className="border-t border-cyan-200 mt-12 pt-6 text-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} The Ekta Project. All rights reserved.</p>
         </div>

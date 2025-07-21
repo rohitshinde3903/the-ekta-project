@@ -7,18 +7,18 @@ import SectionTitle from '../components/SectionTitle';
 
 export default function AboutPage() {
   const teamMembers = [
-    { id: 1, name: 'Priya Sharma', role: 'Founder & CEO', bio: '15+ years in community development' },
-    { id: 2, name: 'Raj Patel', role: 'Program Director', bio: 'Education specialist with NGO experience' },
-    { id: 3, name: 'Ananya Singh', role: 'Health Initiatives Lead', bio: 'Former public health administrator' },
-    { id: 4, name: 'Vikram Mehta', role: 'Sustainability Advisor', bio: 'Environmental scientist and activist' },
+    { id: 1, name: 'Disha Shelke', role: 'Founder & CEO', bio: '3+ years in community development' },
+    { id: 2, name: 'Rushabh Chopda', role: 'Program Director', bio: 'Education specialist with NGO experience' },
+    { id: 3, name: 'Muskan Garg', role: 'Health Initiatives Lead', bio: 'Former public health administrator' },
+    { id: 4, name: 'Rudraveer', role: 'Sustainability Advisor', bio: 'Environmental scientist and activist' },
   ];
 
-  const partners = [
-    { id: 1, name: 'Global Education Fund', description: 'Education partnership since 2015' },
-    { id: 2, name: 'Health for All Foundation', description: 'Medical outreach programs' },
-    { id: 3, name: 'cyan Earth Initiative', description: 'Environmental sustainability projects' },
-    { id: 4, name: 'Women Empowerment Network', description: 'Skill development programs' },
-  ];
+  // const partners = [
+  //   { id: 1, name: 'Global Education Fund', description: 'Education partnership since 2015' },
+  //   { id: 2, name: 'Health for All Foundation', description: 'Medical outreach programs' },
+  //   { id: 3, name: 'cyan Earth Initiative', description: 'Environmental sustainability projects' },
+  //   { id: 4, name: 'Women Empowerment Network', description: 'Skill development programs' },
+  // ];
 
   return (
     
@@ -266,13 +266,14 @@ export default function AboutPage() {
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Our team includes 42 dedicated professionals and over 500 volunteers working across India to implement our community programs.
             </p>
-            <motion.button
+            <motion.a
+              href="https://docs.google.com/forms/d/1muNs0tN6pyf4xbKj3J6cCPT9io2-CwcdxY18Bk8qe5I/viewform?edit_requested=true"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-medium rounded-lg shadow-lg shadow-cyan-300/30 hover:shadow-blue-400/30 transition"
             >
               Join Our Team
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </section>
@@ -368,7 +369,7 @@ export default function AboutPage() {
       </section>
 
       {/* Partners */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <SectionTitle
@@ -416,7 +417,7 @@ export default function AboutPage() {
             </motion.button>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Video Section */}
       <section id='impact-section' className="py-16 md:py-24 bg-gradient-to-br from-cyan-50 to-blue-50">

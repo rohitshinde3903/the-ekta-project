@@ -210,6 +210,7 @@ const Home = () => {
 
 
 {/* Our Impact Section */}
+{/* Our Impact Section */}
 <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-cyan-50">
   <div className="container mx-auto px-4">
     <div className="max-w-3xl mx-auto text-center mb-16">
@@ -236,52 +237,62 @@ const Home = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        Capturing real stories, emotions, and changes through powerful visuals. Join us on Instagram to witness our journey.
+        Capturing real stories, emotions, and change. Follow us to witness it all.
       </motion.p>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {/* Sample Reel/Photo Cards */}
-      {[1, 2, 3].map((item, index) => (
+    {/* Instagram Embed Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {[
+        "https://www.instagram.com/p/DCZsEATzIRV/",
+        "https://www.instagram.com/p/DCZrgA8oGje/",
+        "https://www.instagram.com/p/DHv8WFWN8Os/",
+        "https://www.instagram.com/p/C6l8eF9oiQb/",
+        "https://www.instagram.com/p/CxkbLZNh51a/",
+        "https://www.instagram.com/p/DJe_gLPNFJ0/"
+      ].map((url, idx) => (
         <motion.div
-          key={index}
-          className="rounded-2xl overflow-hidden shadow-lg border border-blue-100 relative group"
+          key={idx}
+          className="overflow-hidden rounded-2xl shadow-lg border border-blue-100 bg-white"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          transition={{ duration: 0.4, delay: idx * 0.1 }}
+          // Added subtle hover effect
+          whileHover={{ scale: 1.02, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)" }}
         >
-          {/* Replace src with actual photo or reel thumbnail */}
-          <img
-            src={`/impact/impact${item}.jpg`}
-            alt={`Impact ${item}`}
-            className="w-full h-64 object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-            <span className="text-white text-sm font-semibold">View on Instagram</span>
+          <div className="w-full h-[480px]">
+            <iframe
+              src={`${url}embed`}
+              className="w-full h-full"
+              allowFullScreen
+              loading="lazy"
+              title={`Instagram Post ${idx}`}
+            />
           </div>
         </motion.div>
       ))}
     </div>
 
-    {/* Instagram CTA */}
-    <motion.div 
-      className="mt-12 text-center"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+    {/* Added "View More" button */}
+    <motion.div
+      className="text-center mt-12"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.3 }}
+      transition={{ duration: 0.6, delay: 0.6 }}
     >
-      <p className="text-md md:text-lg text-gray-700 mb-4">
-        See more moments that matter on our Instagram.
-      </p>
-      <a
-        href="https://instagram.com/your_instagram_id"
-        target="_blank"
+      <a 
+        href="https://www.instagram.com/your-instagram-profile/" // Replace with your actual Instagram profile link
+        target="_blank" 
         rel="noopener noreferrer"
-        className="inline-block px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow hover:scale-105 transition-transform"
+        className="inline-flex items-center px-8 py-4 rounded-full text-white font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl"
       >
-        @your_instagram_id
+        View More on Instagram
+        <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.25-.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+</svg>
+
       </a>
     </motion.div>
   </div>
@@ -486,75 +497,67 @@ const Home = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              Ready to Make a Difference?
-            </motion.h2>
-            <motion.p
-              className="text-xl mb-10 max-w-2xl mx-auto"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Your support can help us reach more communities and create lasting change.
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-wrap justify-center gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-cyan-700 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition"
-              >
-                Donate Now
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white/10 transition"
-              >
-                Become a Volunteer
-              </motion.button>
-            </motion.div>
-            
-            <motion.div 
-              className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-center items-center gap-6"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <div className="flex items-center gap-3">
-                <FiPhoneCall className="text-xl" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FiMapPin className="text-xl" />
-                <span>123 Community St, Impact City</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <FiBook className="text-xl" />
-                <span>contact@ektaproject.org</span>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+     <section className="py-20 md:py-28 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+  <div className="container mx-auto px-6 md:px-12">
+    <motion.div
+      className="text-center max-w-3xl mx-auto"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+        Ready to Make a Difference?
+      </h2>
+      <p className="text-lg md:text-xl mb-10 text-white/90">
+        Your support can help us reach more communities and create lasting change.
+      </p>
+    </motion.div>
+
+    <motion.div
+      className="flex flex-col sm:flex-row justify-center gap-6 mb-14"
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+    >
+      <motion.a
+        href="/donate"
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white text-cyan-700 font-bold px-8 py-4 rounded-xl shadow-md hover:bg-gray-100 transition"
+      >
+        Donate Now
+      </motion.a>
+      <motion.a
+        href="https://docs.google.com/forms/d/1muNs0tN6pyf4xbKj3J6cCPT9io2-CwcdxY18Bk8qe5I/viewform?edit_requested=true"
+        whileHover={{ scale: 1.06 }}
+        whileTap={{ scale: 0.95 }}
+        className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition"
+      >
+        Become a Volunteer
+      </motion.a>
+    </motion.div>
+
+    <motion.div
+      className="flex flex-col sm:flex-row justify-center items-center gap-8 text-sm md:text-base text-white/90 border-t border-white/20 pt-10"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, delay: 0.6 }}
+    >
+      <a href="https://maps.google.com/?q=123+Community+St,+Impact+City" target="_blank" className="flex items-center gap-2 hover:text-white transition">
+        <FiMapPin className="text-lg" />
+        Pune, Maharashtra, India
+      </a>
+      <a href="mailto:theektaprojecct2023@gmail.com" className="flex items-center gap-2 hover:text-white transition">
+        <FiBook className="text-lg" />
+        theektaprojecct2023@gmail.com
+      </a>
+    </motion.div>
+  </div>
+</section>
+
     </div>
   );
 };
