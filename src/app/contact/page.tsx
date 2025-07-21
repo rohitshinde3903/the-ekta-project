@@ -1,13 +1,20 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaClock, FaPaperPlane, FaLinkedin, FaInstagram } from 'react-icons/fa';
+// Removed FaPhone and FaTwitter as per requirements
 
 export default function ContactPage() {
   const contactInfo = [
-    { icon: <FaMapMarkerAlt className="text-xl" />, title: "Our Headquarters", content: "123 Community Street, Mumbai, India 400001" },
-    { icon: <FaPhone className="text-xl" />, title: "Call Us", content: "+91 98765 43210" },
-    { icon: <FaEnvelope className="text-xl" />, title: "Email Us", content: "info@ektaproject.org" },
+    { icon: <FaMapMarkerAlt className="text-xl" />, title: "Our Headquarters", content: "Pune, Maharashtra, India" },
+    { icon: <FaEnvelope className="text-xl" />, title: "Email Us", content: "theektaprojecct2023@gmail.com" },
     { icon: <FaClock className="text-xl" />, title: "Office Hours", content: "Monday-Friday: 9AM - 6PM" },
+  ];
+
+  const teamMembers = [
+    { id: 1, name: 'Disha Shelke', role: 'Founder & CEO', bio: '3+ years in community development' },
+    { id: 2, name: 'Rushabh Chopda', role: 'Program Director', bio: 'Education specialist with NGO experience' },
+    { id: 3, name: 'Muskan Garg', role: 'Health Initiatives Lead', bio: 'Former public health administrator' },
+    { id: 4, name: 'Rudraveer', role: 'Sustainability Advisor', bio: 'Environmental scientist and activist' },
   ];
 
   return (
@@ -57,48 +64,42 @@ export default function ContactPage() {
             >
               Send Message
             </motion.a>
-            <motion.a
-              href="#locations"
-              className="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Visit Us
-            </motion.a>
+            {/* Removed "Visit Us" button as office locations are simplified */}
           </motion.div>
         </motion.div>
       </section>
 
       {/* Contact Information */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            {contactInfo.map((item, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-cyan-100 hover:shadow-xl transition-all"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-100 to-blue-100 flex items-center justify-center text-cyan-600 mb-4">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.content}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <motion.div
+      className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      {contactInfo.map((item, index) => (
+        <motion.div
+          key={index}
+          className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-cyan-100 hover:shadow-xl transition-all"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          whileHover={{ y: -10 }}
+        >
+          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-100 to-blue-100 flex items-center justify-center text-cyan-600 mb-4">
+            {item.icon}
+          </div>
+          <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+          <p className="text-gray-600 break-words text-sm sm:text-base">{item.content}</p>
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Contact Form */}
       <section id="contact-form" className="py-16 bg-gradient-to-br from-cyan-50 to-blue-50">
@@ -144,13 +145,14 @@ export default function ContactPage() {
                   
                   <div className="flex space-x-4">
                     {[
-                      { icon: <FaLinkedin className="text-xl" />, color: "hover:text-blue-700" },
-                      { icon: <FaTwitter className="text-xl" />, color: "hover:text-sky-500" },
-                      { icon: <FaInstagram className="text-xl" />, color: "hover:text-pink-600" }
+                      { icon: <FaLinkedin className="text-xl" />, url: "https://www.linkedin.com/company/the-ekta-project/" }, // Updated LinkedIn URL
+                      { icon: <FaInstagram className="text-xl" />, url: "https://www.instagram.com/theektaproject/" } // Updated Instagram URL
                     ].map((social, idx) => (
                       <motion.a
                         key={idx}
-                        href="#"
+                        href={social.url} // Use the specific URL
+                        target="_blank" // Open in new tab
+                        rel="noopener noreferrer" // Security best practice
                         className="w-10 h-10 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white"
                         whileHover={{ scale: 1.1, backgroundColor: 'rgba(6, 182, 212, 0.8)' }}
                         whileTap={{ scale: 0.95 }}
@@ -193,14 +195,7 @@ export default function ContactPage() {
                           />
                         </div>
 
-                        <div>
-                          <label className="block text-gray-700 mb-2 font-medium">Phone</label>
-                          <input
-                            type="tel"
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                            placeholder="+91 98765 43210"
-                          />
-                        </div>
+                        {/* Removed Phone input field */}
                       </div>
 
                       <div>
@@ -248,97 +243,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Office Locations */}
-      <section id="locations" className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
-              Our Offices
-            </h2>
-            <motion.div 
-              className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"
-              initial={{ width: 0 }}
-              whileInView={{ width: 80 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            />
-            <p className="text-xl text-gray-600">
-              Visit us at one of our locations across India
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <motion.div
-              className="bg-gradient-to-b from-white to-cyan-50 rounded-2xl shadow-lg overflow-hidden border border-cyan-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Mumbai Headquarters</h3>
-                <div className="flex items-start mb-4">
-                  <FaMapMarkerAlt className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">123 Community Street, Mumbai, India 400001</p>
-                </div>
-                <div className="flex items-start mb-4">
-                  <FaPhone className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">+91 98765 43210</p>
-                </div>
-                <div className="flex items-start">
-                  <FaClock className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">Monday-Friday: 9AM - 6PM</p>
-                </div>
-              </div>
-              <div className="h-64 bg-gradient-to-r from-cyan-200 to-blue-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-                    <p className="text-cyan-800 font-medium">Mumbai Office Map</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              className="bg-gradient-to-b from-white to-cyan-50 rounded-2xl shadow-lg overflow-hidden border border-cyan-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-4">Delhi Regional Office</h3>
-                <div className="flex items-start mb-4">
-                  <FaMapMarkerAlt className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">456 Impact Avenue, New Delhi, India 110001</p>
-                </div>
-                <div className="flex items-start mb-4">
-                  <FaPhone className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">+91 98765 43211</p>
-                </div>
-                <div className="flex items-start">
-                  <FaClock className="text-cyan-600 mt-1 mr-3" />
-                  <p className="text-gray-600">Monday-Friday: 9:30AM - 5:30PM</p>
-                </div>
-              </div>
-              <div className="h-64 bg-gradient-to-r from-cyan-200 to-blue-200 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-                    <p className="text-cyan-800 font-medium">Delhi Office Map</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Team Contact */}
       <section className="py-16 bg-gradient-to-br from-cyan-50 to-blue-50">
         <div className="container mx-auto px-4">
@@ -350,7 +254,7 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent">
-              Contact Our Team
+              Meet Our Leadership
             </h2>
             <motion.div 
               className="h-1 w-20 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto mb-6 rounded-full"
@@ -360,18 +264,14 @@ export default function ContactPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             />
             <p className="text-xl text-gray-600">
-              Reach out directly to our dedicated team members
+              Get to know the dedicated individuals leading The Ekta Project.
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {[
-              { name: "Priya Sharma", role: "Program Director", email: "priya@ektaproject.org" },
-              { name: "Raj Patel", role: "Partnerships Manager", email: "raj@ektaproject.org" },
-              { name: "Ananya Singh", role: "Volunteer Coordinator", email: "ananya@ektaproject.org" }
-            ].map((person, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"> {/* Adjusted grid to 4 columns */}
+            {teamMembers.map((person, index) => (
               <motion.div
-                key={index}
+                key={person.id}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cyan-100"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -379,23 +279,23 @@ export default function ContactPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="h-40 bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
-                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                  {/* Placeholder for team member image/avatar - currently a colored box */}
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-cyan-800 font-bold">
+                    {person.name.charAt(0)}
+                  </div> 
                 </div>
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-gray-800 mb-1">{person.name}</h3>
                   <p className="text-cyan-600 font-medium mb-3">{person.role}</p>
-                  <a 
-                    href={`mailto:${person.email}`} 
-                    className="text-blue-500 hover:text-blue-700 transition-colors"
-                  >
-                    {person.email}
-                  </a>
+                  <p className="text-gray-700 text-sm italic">{person.bio}</p>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Removed "Our Offices" section entirely */}
     </div>
   );
 }

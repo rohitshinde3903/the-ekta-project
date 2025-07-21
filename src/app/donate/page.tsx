@@ -259,8 +259,8 @@ export default function DonatePage() {
               "The Ekta Project has demonstrated exceptional accountability in their financial management. Our corporate foundation is proud to partner with them on education initiatives across rural India."
             </blockquote>
             <div>
-              <p className="font-bold text-gray-800">Rahul Sharma</p>
-              <p className="text-cyan-600">Director, CSR Foundation</p>
+              <p className="font-bold text-gray-800">Rohit Shinde</p>
+              <p className="text-cyan-600">Founder, Stones Web</p>
             </div>
           </div>
         </div>
