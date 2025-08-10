@@ -2,7 +2,6 @@
 
 # 🌟 Ekta Project 🚀
 **Crafted with Precision | Powered by Passion | Delivered by [Stones Web Services](https://stonesweb.in)**  
-**Lead Developer:** Rohit Shinde — *Turning coffee ☕ into scalable code since forever*  
 
 [🌐 Portfolio](https://rohiit.is-a.dev) • [💼 LinkedIn](https://linkedin.com/in/rohitshinde3903) • [💻 GitHub](https://github.com/rohitshinde3903)  
 ✉️ **Email:** rohitshinde3903@gmail.com • 📱 **Phone:** +91-7499273903  
